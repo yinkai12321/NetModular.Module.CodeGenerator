@@ -32,7 +32,7 @@ export default {
         title: '编辑项目',
         width: '30%',
         action: api.update,
-        labelWidth: '70px',
+        labelWidth: '120px',
         model: {
           name: '',
           no: 0,
@@ -45,6 +45,9 @@ export default {
           ],
           code: [
             { required: true, message: '请输入编码', trigger: 'blur' }
+          ],
+          copyright: [
+            { required: true, message: '请输入版权声明', trigger: 'blur' }
           ]
         }
       }

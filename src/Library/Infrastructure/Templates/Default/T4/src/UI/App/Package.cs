@@ -29,14 +29,14 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             this.Write("{\r\n    \"name\": \"");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_prefix));
             
             #line default
             #line hidden
-            this.Write("-");
+            this.Write("-module-");
             
             #line 4 "D:\MyProject\NetModular.Module.CodeGenerator\src\Library\Infrastructure\Templates\Default\T4\src\UI\App\Package.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.WebUIDicName));
+            this.Write(this.ToStringHelper.ToStringWithCulture(_model.Project.Code.ToLower()));
             
             #line default
             #line hidden
@@ -79,7 +79,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
             
             #line default
             #line hidden
-            this.Write(@"-module-admin"": ""^1.0.0""
+            this.Write(@"-module-admin"": ""^1.0.1""
     },
     ""devDependencies"": {
         ""@vue/cli-plugin-babel"": ""^3.11.0"",
@@ -96,7 +96,7 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Default.T4.sr
         ""rimraf"": ""^3.0.0"",
         ""sass"": ""^1.22.10"",
         ""sass-loader"": ""^7.3.1"",
-        ""uglifyjs-webpack-plugin"": ""^2.2.0"",
+        ""terser-webpack-plugin"": ""^2.2.1"",
         ""vue-template-compiler"": ""^2.6.10""
     }
 }
